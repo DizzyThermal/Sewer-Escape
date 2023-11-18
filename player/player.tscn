@@ -174,10 +174,10 @@ height = 26.0
 script = ExtResource("1_i0nm6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -25)
+position = Vector2(0, -23)
 sprite_frames = SubResource("SpriteFrames_2g1aw")
-animation = &"Walk-Right"
-frame_progress = 0.577154
+animation = &"Idle-Right"
+frame_progress = 0.404771
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -13)
