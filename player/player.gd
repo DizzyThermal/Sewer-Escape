@@ -15,7 +15,7 @@ func play_anim(direction):
 			$AnimatedSprite2D.play("Jump-Right")
 		else:
 			$AnimatedSprite2D.play("Jump-Left")
-	elif direction.x == 0:
+	elif direction == 0:
 		# Idle
 		if xDirection > 0:
 			$AnimatedSprite2D.play("Idle-Right")
@@ -23,11 +23,11 @@ func play_anim(direction):
 			$AnimatedSprite2D.play("Idle-Left")
 	else:
 		# Walk
-		if direction.x > 0:
+		if direction > 0:
 			$AnimatedSprite2D.play("Walk-Right")
 		else:
 			$AnimatedSprite2D.play("Walk-Left")
-		xDirection = direction.x
+		xDirection = direction
 	
 func _physics_process(delta):
 	# Add the gravity.
@@ -38,10 +38,10 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	var direction = Input.get_vector("Left", "Right", "Up", "Down")
+	var direction = Input.get_axis("Left", "Right")
 	
 	if direction:
-		velocity = direction * SPEED
+		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
