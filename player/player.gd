@@ -9,7 +9,13 @@ var xDirection = 1
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func play_anim(direction):
-	if direction.x == 0:
+	if not is_on_floor():
+		# Jump
+		if xDirection > 0:
+			$AnimatedSprite2D.play("Jump-Right")
+		else:
+			$AnimatedSprite2D.play("Jump-Left")
+	elif direction.x == 0:
 		# Idle
 		if xDirection > 0:
 			$AnimatedSprite2D.play("Idle-Right")
