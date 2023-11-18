@@ -1,6 +1,6 @@
 # Sewer-Escape
 
-![Sewer Escape](resources/sewer-escape.png)
+![Sewer Escape](resources/sewer-escape-rock.gif)
 
 ## Game Summary
 2D-Platformer that needs to escape the flooding sewers.
