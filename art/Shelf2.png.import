@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmwomjsyt1l5x"
-path="res://.godot/imported/Rock.png-a13e07eaff9caf16fcc8de2eb095e0a1.ctex"
+uid="uid://cq6let120i5i4"
+path="res://.godot/imported/Shelf2.png-d8688b50214f6e92f7720910dd18b701.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://enemies/Rock.png"
-dest_files=["res://.godot/imported/Rock.png-a13e07eaff9caf16fcc8de2eb095e0a1.ctex"]
+source_file="res://art/Shelf2.png"
+dest_files=["res://.godot/imported/Shelf2.png-d8688b50214f6e92f7720910dd18b701.ctex"]
 
 [params]
 

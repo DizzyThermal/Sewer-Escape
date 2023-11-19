@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmgnd80dkhm56"]
+
+[ext_resource type="Texture2D" uid="uid://bkjh6lgrmooa8" path="res://art/Pipe.png" id="1_tixx6"]
+
+[node name="Pipe" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tixx6")

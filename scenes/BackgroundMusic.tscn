@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://6g03xxfqvh3d"]
+
+[ext_resource type="AudioStream" uid="uid://ctde1qaknbr8y" path="res://sound/heatleybros-fight-or-flight.ogg" id="1_cq57u"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_cq57u")
+autoplay = true

@@ -41,3 +41,6 @@ The reason for this project is to learn Godot 4.x development for future games.
 * [Free Street Animal Pixel Art Asset Pack](https://craftpix.net/freebies/free-street-animal-pixel-art-asset-pack/)
 * [Free Desert Enemy Sprite Sheets Pixel Art](https://craftpix.net/freebies/free-desert-enemy-sprite-sheets-pixel-art/)
 * [Free Jump Game Items](https://craftpix.net/freebies/free-jump-game-items/)
+
+## Music / Sound
+* ["Fight Or Flight" - 8 Bit Battle Rock - RPG Game Music By HeatleyBros](https://www.youtube.com/watch?v=5uPFiSBlZUE&t=0s)
