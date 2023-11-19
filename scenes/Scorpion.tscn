@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dgcyf347dvqwu"]
+[gd_scene load_steps=30 format=3 uid="uid://dgcyf347dvqwu"]
 
 [ext_resource type="Texture2D" uid="uid://cm4is452g3tj2" path="res://art/Scorpion.png" id="1_cxpk1"]
 [ext_resource type="Script" path="res://scenes/Scorpion.gd" id="2_n3h5c"]
@@ -205,9 +205,14 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jnyyd"]
-size = Vector2(27, 23)
+size = Vector2(27, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mi78e"]
+size = Vector2(32, 23)
 
 [node name="Scorpion" type="CharacterBody2D"]
+collision_layer = 9
+collision_mask = 9
 script = ExtResource("2_n3h5c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -216,6 +221,17 @@ sprite_frames = SubResource("SpriteFrames_tatmj")
 animation = &"Idle-Left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.5, -10.5)
+position = Vector2(-1.5, -10)
 shape = SubResource("RectangleShape2D_jnyyd")
-debug_color = Color(1, 0, 0, 0.32549)
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(-1, -10.5)
+shape = SubResource("RectangleShape2D_mi78e")
+debug_color = Color(1, 0, 0, 0.419608)
+
+[connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]

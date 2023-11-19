@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 10.0
+const SPEED = 20.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -40,3 +40,6 @@ func _on_damage_box_body_entered(body):
 	else:
 		$AnimatedSprite2D.play("Death-Left")
 	queue_free()
+
+func _on_hurt_box_body_entered(body):
+	get_tree().reload_current_scene()

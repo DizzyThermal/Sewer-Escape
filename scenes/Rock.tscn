@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://b13cq4ve8w3uv"]
+[gd_scene load_steps=5 format=3 uid="uid://b13cq4ve8w3uv"]
 
 [ext_resource type="Script" path="res://enemies/Rock.gd" id="1_qw8u2"]
 [ext_resource type="Texture2D" uid="uid://cmwomjsyt1l5x" path="res://art/Rock.png" id="2_roona"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dfa7"]
 size = Vector2(29, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uavvo"]
+size = Vector2(27, 1)
 
 [node name="Rock" type="CharacterBody2D"]
 script = ExtResource("1_qw8u2")
@@ -13,6 +16,17 @@ script = ExtResource("1_qw8u2")
 position = Vector2(0, -109)
 texture = ExtResource("2_roona")
 
-[node name="HurtBox" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -108.5)
 shape = SubResource("RectangleShape2D_2dfa7")
+
+[node name="DeathZone" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(0.5, -98.5)
+shape = SubResource("RectangleShape2D_uavvo")
+debug_color = Color(1, 0, 0, 0.34902)
+
+[connection signal="body_entered" from="DeathZone" to="." method="_on_death_zone_body_entered"]

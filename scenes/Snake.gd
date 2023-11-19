@@ -40,3 +40,6 @@ func _on_damage_box_body_entered(body):
 	else:
 		$AnimatedSprite2D.play("Death-Left")
 	queue_free()
+
+func _on_hurt_box_body_entered(body):
+	get_tree().reload_current_scene()

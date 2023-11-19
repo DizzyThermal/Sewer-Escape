@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://b4rselb33nm28"]
+[gd_scene load_steps=31 format=3 uid="uid://b4rselb33nm28"]
 
 [ext_resource type="Script" path="res://scenes/Rat.gd" id="1_0n634"]
 [ext_resource type="Texture2D" uid="uid://bngurger10ao1" path="res://art/Rat.png" id="1_kt802"]
@@ -210,7 +210,12 @@ size = Vector2(26, 7)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i7iq4"]
 size = Vector2(21, 2)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wv1tr"]
+size = Vector2(28, 8)
+
 [node name="Rat" type="CharacterBody2D"]
+collision_layer = 9
+collision_mask = 9
 script = ExtResource("1_0n634")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -222,7 +227,7 @@ frame_progress = 0.755251
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, -3.5)
 shape = SubResource("RectangleShape2D_wlo36")
-debug_color = Color(0.988235, 0, 0, 0.380392)
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="DamageBox" type="Area2D" parent="."]
 collision_layer = 4
@@ -233,4 +238,14 @@ position = Vector2(1.5, -8)
 shape = SubResource("RectangleShape2D_i7iq4")
 debug_color = Color(0.854902, 0.364706, 0, 0.188235)
 
+[node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(2, -3)
+shape = SubResource("RectangleShape2D_wv1tr")
+debug_color = Color(1, 0, 0, 0.419608)
+
 [connection signal="body_entered" from="DamageBox" to="." method="_on_damage_box_body_entered"]
+[connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]
