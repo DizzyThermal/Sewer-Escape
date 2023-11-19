@@ -13,11 +13,11 @@ size = Vector2(27, 1)
 script = ExtResource("1_qw8u2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -109)
+position = Vector2(0, -10)
 texture = ExtResource("2_roona")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -108.5)
+position = Vector2(0.5, -9.5)
 shape = SubResource("RectangleShape2D_2dfa7")
 
 [node name="DeathZone" type="Area2D" parent="."]
@@ -25,7 +25,7 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
-position = Vector2(0.5, -98.5)
+position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_uavvo")
 debug_color = Color(1, 0, 0, 0.34902)
 
