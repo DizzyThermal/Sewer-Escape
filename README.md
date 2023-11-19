@@ -30,9 +30,12 @@ The reason for this project is to learn Godot 4.x development for future games.
     - [x] Animations
     - [x] Collision
     - [ ] Hurtbox
-- [ ] Create Rat
-- [ ] Create Snake
-- [ ] Create Scorpion
+    - [ ] Sound Effects
+- [x] Create Rat
+- [x] Create Snake
+- [x] Create Scorpion
+- [x] Create Falling Rock
+- [x] Background Music
 - [ ] Add Timer
 
 ## Artwork
