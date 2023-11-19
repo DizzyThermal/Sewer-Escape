@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://bd7ajehebwd3e"]
+[gd_scene load_steps=16 format=3 uid="uid://bd7ajehebwd3e"]
 
 [ext_resource type="TileSet" uid="uid://bir4qfvaulu2x" path="res://scenes/Tileset.tres" id="1_7ekmf"]
+[ext_resource type="Script" path="res://scenes/Level_02.gd" id="1_eoj1b"]
 [ext_resource type="PackedScene" uid="uid://by7gxrbscsjbo" path="res://player/Player.tscn" id="2_3ednx"]
 [ext_resource type="PackedScene" uid="uid://dmgnd80dkhm56" path="res://scenes/Pipe.tscn" id="3_l2tfk"]
 [ext_resource type="PackedScene" uid="uid://b02j3hq8rkmft" path="res://scenes/Water.tscn" id="4_6h3gn"]
@@ -28,6 +29,7 @@ size = Vector2(30.5, 129)
 size = Vector2(27, 160)
 
 [node name="Level_02" type="Node2D"]
+script = ExtResource("1_eoj1b")
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -58,6 +60,10 @@ offset_left = -160.0
 offset_top = 16.0
 offset_right = 1793.0
 offset_bottom = 544.0
+
+[node name="WaterTimer" type="Timer" parent="Foreground"]
+wait_time = 0.1
+autostart = true
 
 [node name="DeathZone" type="Area2D" parent="Foreground"]
 collision_layer = 4
@@ -156,6 +162,7 @@ position = Vector2(1486, -610)
 [node name="Rat6" parent="Foreground/Enemies" instance=ExtResource("5_ue06i")]
 position = Vector2(1319, -322)
 
+[connection signal="timeout" from="Foreground/WaterTimer" to="." method="_on_water_timer_timeout"]
 [connection signal="body_entered" from="Foreground/DeathZone" to="Player" method="_on_death_zone_body_entered"]
 [connection signal="body_entered" from="Foreground/Enemies/Rock/TriggerBox" to="Foreground/Enemies/Rock" method="_on_trigger_box_body_entered"]
 [connection signal="body_entered" from="Foreground/Enemies/Rock2/TriggerBox" to="Foreground/Enemies/Rock2" method="_on_trigger_box_body_entered"]
