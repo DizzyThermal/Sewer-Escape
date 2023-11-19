@@ -47,3 +47,6 @@ func _physics_process(delta):
 
 	move_and_slide()
 	play_anim(direction)
+
+func _on_death_zone_body_entered(body):
+	get_tree().reload_current_scene()

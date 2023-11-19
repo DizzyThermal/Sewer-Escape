@@ -217,7 +217,7 @@ script = ExtResource("1_0n634")
 position = Vector2(0, -14)
 sprite_frames = SubResource("SpriteFrames_avle7")
 animation = &"Idle-Left"
-frame_progress = 0.80172
+frame_progress = 0.755251
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, -3.5)
@@ -231,5 +231,6 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageBox"]
 position = Vector2(1.5, -8)
 shape = SubResource("RectangleShape2D_i7iq4")
+debug_color = Color(0.854902, 0.364706, 0, 0.188235)
 
 [connection signal="body_entered" from="DamageBox" to="." method="_on_damage_box_body_entered"]
