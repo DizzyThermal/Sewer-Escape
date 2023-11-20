@@ -36,7 +36,15 @@ The reason for this project is to learn Godot 4.x development for future games.
 - [x] Create Scorpion
 - [x] Create Falling Rock
 - [x] Background Music
+- [x] Add Rising Water
+- [x] Title Screen
+  - [x] Play, Levels, Exit
+  - [ ] Game Logo
 - [ ] Add Timer
+- [x] Levels
+  - [x] Level 1
+  - [x] Level 2
+  - [x] Level 3
 
 ## Artwork
 * [Power Station Free Tileset Pixel Art](https://craftpix.net/freebies/power-station-free-tileset-pixel-art/)
