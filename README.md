@@ -39,7 +39,7 @@ The reason for this project is to learn Godot 4.x development for future games.
 - [x] Add Rising Water
 - [x] Title Screen
   - [x] Play, Levels, Exit
-  - [ ] Game Logo
+  - [x] Game Logo
 - [ ] Add Timer
 - [x] Levels
   - [x] Level 1
