@@ -1,14 +1,15 @@
-[gd_scene load_steps=14 format=3 uid="uid://cbgpjmjrirnnh"]
+[gd_scene load_steps=16 format=3 uid="uid://cbgpjmjrirnnh"]
 
 [ext_resource type="Script" path="res://scenes/Level_03.gd" id="1_jddbs"]
 [ext_resource type="TileSet" uid="uid://bir4qfvaulu2x" path="res://scenes/Tileset.tres" id="1_t1bll"]
 [ext_resource type="PackedScene" uid="uid://by7gxrbscsjbo" path="res://player/Player.tscn" id="2_jpq6f"]
-[ext_resource type="PackedScene" uid="uid://dmgnd80dkhm56" path="res://scenes/Pipe.tscn" id="3_3pv3s"]
+[ext_resource type="PackedScene" path="res://scenes/Pipe.tscn" id="3_3pv3s"]
 [ext_resource type="PackedScene" uid="uid://b4rselb33nm28" path="res://scenes/Rat.tscn" id="4_jjkpy"]
 [ext_resource type="PackedScene" uid="uid://b13cq4ve8w3uv" path="res://scenes/Rock.tscn" id="5_ujowu"]
 [ext_resource type="PackedScene" uid="uid://iotxy1b60d87" path="res://scenes/MobileControls.tscn" id="6_8ii12"]
 [ext_resource type="PackedScene" uid="uid://bsmre1xuai1bx" path="res://scenes/Snake.tscn" id="6_uwidl"]
 [ext_resource type="PackedScene" uid="uid://dgcyf347dvqwu" path="res://scenes/Scorpion.tscn" id="8_mtim7"]
+[ext_resource type="PackedScene" uid="uid://b02j3hq8rkmft" path="res://scenes/Water.tscn" id="9_dxu5t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wajy"]
 size = Vector2(31, 31)
@@ -21,6 +22,9 @@ size = Vector2(34, 127)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fsq6b"]
 size = Vector2(46.5, 3.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hdcmr"]
+size = Vector2(483, 24)
 
 [node name="Level_03" type="Node2D"]
 script = ExtResource("1_jddbs")
@@ -111,6 +115,25 @@ position = Vector2(63.75, -1014.75)
 shape = SubResource("RectangleShape2D_fsq6b")
 debug_color = Color(0.854902, 0.364706, 0, 0.188235)
 
+[node name="Water" parent="Foreground" instance=ExtResource("9_dxu5t")]
+offset_left = -161.0
+offset_top = 62.0
+offset_right = 321.0
+offset_bottom = 286.0
+
+[node name="WaterTimer" type="Timer" parent="Foreground"]
+wait_time = 0.1
+autostart = true
+
+[node name="DeathZoneLevel3" type="Area2D" parent="Foreground"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foreground/DeathZoneLevel3"]
+position = Vector2(81, 103)
+shape = SubResource("RectangleShape2D_hdcmr")
+debug_color = Color(0.854902, 0.0705882, 0, 0.419608)
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 10)
 offset = Vector2(100, 0)
@@ -126,3 +149,5 @@ metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="Foreground/Enemies/Rock/TriggerBox" to="Foreground/Enemies/Rock" method="_on_trigger_box_body_entered"]
 [connection signal="body_entered" from="Foreground/NextArea" to="." method="_on_next_area_body_entered"]
+[connection signal="timeout" from="Foreground/WaterTimer" to="." method="_on_water_timer_timeout"]
+[connection signal="body_entered" from="Foreground/DeathZoneLevel3" to="Player" method="_on_death_zone_level_3_body_entered"]

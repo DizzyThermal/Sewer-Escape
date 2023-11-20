@@ -18,7 +18,7 @@ func _on_water_timer_timeout():
 	$Foreground/Water.set_size(Vector2(WATER_WIDTH, currentHeight))
 	currentHeight += 1
 	$Foreground/Water.global_position.y -= 1
-	$Foreground/DeathZone/CollisionShape2D.global_position.y -= 1
+	$Foreground/DeathZoneLevel2/CollisionShape2D.global_position.y -= 1
 
 
 func _on_next_area_body_entered(body):
