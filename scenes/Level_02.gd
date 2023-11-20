@@ -11,7 +11,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Input.is_action_just_pressed("Menu"):
+		get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")
 
 func _on_water_timer_timeout():
 	$Foreground/Water.set_size(Vector2(WATER_WIDTH, currentHeight))

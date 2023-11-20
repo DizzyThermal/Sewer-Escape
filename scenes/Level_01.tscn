@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://by7gxrbscsjbo" path="res://player/Player.tscn" id="1_8xwqu"]
 [ext_resource type="TileSet" uid="uid://bir4qfvaulu2x" path="res://scenes/Tileset.tres" id="1_545i5"]
 [ext_resource type="PackedScene" uid="uid://iotxy1b60d87" path="res://scenes/MobileControls.tscn" id="3_1jnjn"]
-[ext_resource type="PackedScene" uid="uid://dmgnd80dkhm56" path="res://scenes/Pipe.tscn" id="4_j3llc"]
+[ext_resource type="PackedScene" path="res://scenes/Pipe.tscn" id="4_j3llc"]
 [ext_resource type="PackedScene" uid="uid://b13cq4ve8w3uv" path="res://scenes/Rock.tscn" id="4_vfvel"]
 [ext_resource type="PackedScene" uid="uid://b02j3hq8rkmft" path="res://scenes/Water.tscn" id="5_oujuk"]
 [ext_resource type="PackedScene" uid="uid://b4rselb33nm28" path="res://scenes/Rat.tscn" id="6_hr5dh"]
