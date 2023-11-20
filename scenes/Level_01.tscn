@@ -150,4 +150,4 @@ scale = Vector2(0.5, 0.5)
 [connection signal="body_entered" from="Foreground/DeathZone" to="Player" method="_on_death_zone_body_entered"]
 [connection signal="body_entered" from="Foreground/Enemies/Rock/TriggerBox" to="Foreground/Enemies/Rock" method="_on_trigger_box_body_entered"]
 [connection signal="body_entered" from="Foreground/Enemies/Rock2/TriggerBox" to="Foreground/Enemies/Rock2" method="_on_trigger_box_body_entered"]
-[connection signal="body_entered" from="Foreground/NextArea" to="Player" method="_on_next_area_body_entered"]
+[connection signal="body_entered" from="Foreground/NextArea" to="." method="_on_next_area_body_entered"]

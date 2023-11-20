@@ -11,4 +11,4 @@ func _process(delta):
 	pass
 
 func _on_next_area_body_entered(body):
-	get_tree().change_scene_to_file("res://scenes/Level_02.tscn")
+	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")

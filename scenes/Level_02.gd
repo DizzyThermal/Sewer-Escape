@@ -18,3 +18,7 @@ func _on_water_timer_timeout():
 	currentHeight += 1
 	$Foreground/Water.global_position.y -= 1
 	$Foreground/DeathZone/CollisionShape2D.global_position.y -= 1
+
+
+func _on_next_area_body_entered(body):
+	get_tree().change_scene_to_file("res://scenes/Level_03.tscn")

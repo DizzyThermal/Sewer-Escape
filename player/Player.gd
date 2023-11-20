@@ -50,6 +50,3 @@ func _physics_process(delta):
 
 func _on_death_zone_body_entered(body):
 	get_tree().reload_current_scene()
-
-func _on_next_area_body_entered(body):
-	get_tree().change_scene_to_file("res://scenes/Level_02.tscn")
