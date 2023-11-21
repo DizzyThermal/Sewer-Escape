@@ -60,11 +60,11 @@ offset_bottom = 96.8
 position = Vector2(623, 119)
 texture = ExtResource("2_xdbiw")
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Level 1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Level 1" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Level 2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Level 1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Level 2" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Level 2" to="." method="_on_levels_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Level 3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Level 2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Level 3" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Level 3" to="." method="_on_level_3_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

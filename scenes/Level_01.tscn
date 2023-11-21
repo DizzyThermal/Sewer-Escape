@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://by7gxrbscsjbo" path="res://player/Player.tscn" id="1_8xwqu"]
 [ext_resource type="TileSet" uid="uid://bir4qfvaulu2x" path="res://scenes/Tileset.tres" id="1_545i5"]
 [ext_resource type="PackedScene" uid="uid://iotxy1b60d87" path="res://scenes/MobileControls.tscn" id="3_1jnjn"]
-[ext_resource type="PackedScene" path="res://scenes/Pipe.tscn" id="4_j3llc"]
+[ext_resource type="PackedScene" uid="uid://dmgnd80dkhm56" path="res://scenes/Pipe.tscn" id="4_j3llc"]
 [ext_resource type="PackedScene" uid="uid://b13cq4ve8w3uv" path="res://scenes/Rock.tscn" id="4_vfvel"]
 [ext_resource type="PackedScene" uid="uid://b02j3hq8rkmft" path="res://scenes/Water.tscn" id="5_oujuk"]
 [ext_resource type="PackedScene" uid="uid://b4rselb33nm28" path="res://scenes/Rat.tscn" id="6_hr5dh"]
@@ -70,11 +70,11 @@ offset_top = 83.0
 offset_right = 1216.0
 offset_bottom = 540.0
 
-[node name="DeathZone" type="Area2D" parent="Foreground"]
+[node name="DeathZoneLevel1" type="Area2D" parent="Foreground"]
 collision_layer = 4
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Foreground/DeathZone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foreground/DeathZoneLevel1"]
 position = Vector2(528.5, 389)
 shape = SubResource("RectangleShape2D_3hroq")
 debug_color = Color(1, 0, 0, 0.266667)
@@ -147,7 +147,7 @@ offset_right = -224.0
 offset_bottom = 131.0
 scale = Vector2(0.5, 0.5)
 
-[connection signal="body_entered" from="Foreground/DeathZone" to="Player" method="_on_death_zone_body_entered"]
+[connection signal="body_entered" from="Foreground/DeathZoneLevel1" to="Player" method="_on_death_zone_level_1_body_entered"]
 [connection signal="body_entered" from="Foreground/Enemies/Rock/TriggerBox" to="Foreground/Enemies/Rock" method="_on_trigger_box_body_entered"]
 [connection signal="body_entered" from="Foreground/Enemies/Rock2/TriggerBox" to="Foreground/Enemies/Rock2" method="_on_trigger_box_body_entered"]
 [connection signal="body_entered" from="Foreground/NextArea" to="." method="_on_next_area_body_entered"]

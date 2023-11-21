@@ -48,10 +48,11 @@ func _physics_process(delta):
 	move_and_slide()
 	play_anim(direction)
 
-
-func _on_death_zone_level_3_body_entered(body):
+func _on_death_zone_level_1_body_entered(body):
 	get_tree().reload_current_scene()
 
-
 func _on_death_zone_level_2_body_entered(body):
+	get_tree().reload_current_scene()
+
+func _on_death_zone_level_3_body_entered(body):
 	get_tree().reload_current_scene()
