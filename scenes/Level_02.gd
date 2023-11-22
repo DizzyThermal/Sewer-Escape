@@ -14,12 +14,5 @@ func _process(delta):
 	if Input.is_action_just_pressed("Menu"):
 		get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")
 
-func _on_water_timer_timeout():
-	$Foreground/Water.set_size(Vector2(WATER_WIDTH, currentHeight))
-	currentHeight += 1
-	$Foreground/Water.global_position.y -= 1
-	$Foreground/DeathZoneLevel2/CollisionShape2D.global_position.y -= 1
-
-
 func _on_next_area_body_entered(body):
 	get_tree().change_scene_to_file("res://scenes/Level_03.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://by7gxrbscsjbo"]
+[gd_scene load_steps=30 format=3 uid="uid://by7gxrbscsjbo"]
 
 [ext_resource type="Script" path="res://player/Player.gd" id="1_i0nm6"]
 [ext_resource type="Texture2D" uid="uid://dllhts8ar81g" path="res://art/Player.png" id="2_jftny"]
@@ -195,7 +195,17 @@ animations = [{
 radius = 7.0
 height = 26.0
 
+[sub_resource type="Gradient" id="Gradient_sqfu1"]
+offsets = PackedFloat32Array(0, 0.709677)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_p34x7"]
+gradient = SubResource("Gradient_sqfu1")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="Player" type="CharacterBody2D"]
+z_index = 2
 collision_layer = 7
 script = ExtResource("1_i0nm6")
 
@@ -209,3 +219,8 @@ position = Vector2(0, -13)
 shape = SubResource("CapsuleShape2D_k1uui")
 
 [node name="BackgroundMusic" parent="." instance=ExtResource("3_j1ftj")]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -12)
+scale = Vector2(3, 3)
+texture = SubResource("GradientTexture2D_p34x7")
