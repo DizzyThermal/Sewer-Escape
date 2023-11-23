@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://iotxy1b60d87"]
+[gd_scene load_steps=5 format=3 uid="uid://iotxy1b60d87"]
 
 [ext_resource type="Texture2D" uid="uid://bjqanf6wrgoi3" path="res://art/left-arrow.png" id="1_gpkou"]
 [ext_resource type="Texture2D" uid="uid://deuvsep5g6xco" path="res://art/right-arrow.png" id="2_ly3m0"]
 [ext_resource type="Texture2D" uid="uid://rjpp4l6eilfj" path="res://art/jump-button.png" id="3_jydm4"]
+[ext_resource type="Texture2D" uid="uid://b3dmyavovpse2" path="res://art/Hat.png" id="4_s0wae"]
 
 [node name="MobileControls" type="Control"]
 z_index = 5
@@ -10,45 +11,48 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -190.0
-offset_top = -107.0
-offset_right = -190.0
-offset_bottom = -107.0
+offset_right = 1120.0
+offset_bottom = 360.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.2, 0.2)
 
 [node name="Left" type="TouchScreenButton" parent="."]
-position = Vector2(36.6665, 625.333)
+position = Vector2(-223.333, 230.333)
 scale = Vector2(0.25, 0.25)
 texture_normal = ExtResource("1_gpkou")
 passby_press = true
 action = "Left"
 
 [node name="Back" type="TouchScreenButton" parent="."]
-position = Vector2(45, -19.6677)
+position = Vector2(-215, -332.168)
 scale = Vector2(0.25, 0.25)
 texture_normal = ExtResource("1_gpkou")
 passby_press = true
 action = "Menu"
 
 [node name="Right" type="TouchScreenButton" parent="."]
-position = Vector2(221.667, 623.335)
+position = Vector2(-38.3328, 228.335)
 scale = Vector2(0.25, 0.25)
 texture_normal = ExtResource("2_ly3m0")
 passby_press = true
 action = "Right"
 
 [node name="Jump" type="TouchScreenButton" parent="."]
-position = Vector2(1640.66, 637.332)
+position = Vector2(1080.66, 229.832)
 scale = Vector2(0.25, 0.25)
 texture_normal = ExtResource("3_jydm4")
 passby_press = true
 action = "Jump"
 
 [node name="Hat" type="TouchScreenButton" parent="."]
-position = Vector2(1649, -14.6677)
+position = Vector2(1089, -334.668)
 scale = Vector2(0.25, 0.25)
 texture_normal = ExtResource("3_jydm4")
 passby_press = true
 action = "Hat"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1145, -272.5)
+scale = Vector2(8, 8)
+texture = ExtResource("4_s0wae")

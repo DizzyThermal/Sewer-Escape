@@ -67,12 +67,6 @@ offset = Vector2(100, 0)
 zoom = Vector2(3, 3)
 
 [node name="MobileControls" parent="Camera2D" instance=ExtResource("10_ckdcd")]
-offset_left = -224.0
-offset_top = 131.0
-offset_right = -224.0
-offset_bottom = 131.0
-scale = Vector2(0.5, 0.5)
-metadata/_edit_use_anchors_ = true
 
 [node name="Entry Pipe" parent="." instance=ExtResource("3_l2tfk")]
 z_index = 3
