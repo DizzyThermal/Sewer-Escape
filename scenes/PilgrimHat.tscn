@@ -1,0 +1,195 @@
+[gd_scene load_steps=25 format=3 uid="uid://bluxn426tm8wo"]
+
+[ext_resource type="Texture2D" uid="uid://ca4hoq7wrdudv" path="res://art/Pilgrim-Hat.png" id="1_m6yl1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vreuh"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qd8mb"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tf26e"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g30u0"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mydao"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6fyi"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0xwt"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjl1l"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krhn5"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_imgv3"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rw5uq"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjji5"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j01g3"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ae08o"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwhy2"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsvpo"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(160, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1o7a0"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r71rx"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u15ir"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0uw7"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l31lw"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xo45n"]
+atlas = ExtResource("1_m6yl1")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mbbu3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vreuh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qd8mb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tf26e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g30u0")
+}],
+"loop": true,
+"name": &"Idle-Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mydao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r6fyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0xwt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjl1l")
+}],
+"loop": true,
+"name": &"Idle-Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_krhn5")
+}],
+"loop": true,
+"name": &"Jump-Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_imgv3")
+}],
+"loop": true,
+"name": &"Jump-Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rw5uq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjji5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j01g3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ae08o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwhy2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wsvpo")
+}],
+"loop": true,
+"name": &"Walk-Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1o7a0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r71rx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u15ir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0uw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l31lw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xo45n")
+}],
+"loop": true,
+"name": &"Walk-Right",
+"speed": 5.0
+}]
+
+[node name="PilgrimHat" type="AnimatedSprite2D"]
+position = Vector2(0, -23)
+sprite_frames = SubResource("SpriteFrames_mbbu3")
+animation = &"Jump-Right"

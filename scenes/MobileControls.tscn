@@ -10,26 +10,45 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -190.0
+offset_top = -107.0
+offset_right = -190.0
+offset_bottom = -107.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.3, 0.3)
 
 [node name="Left" type="TouchScreenButton" parent="."]
-position = Vector2(45, -120)
+position = Vector2(36.6665, 625.333)
 scale = Vector2(0.25, 0.25)
 texture_normal = ExtResource("1_gpkou")
 passby_press = true
 action = "Left"
 
+[node name="Back" type="TouchScreenButton" parent="."]
+position = Vector2(45, -19.6677)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("1_gpkou")
+passby_press = true
+action = "Menu"
+
 [node name="Right" type="TouchScreenButton" parent="."]
-position = Vector2(230, -122)
+position = Vector2(221.667, 623.335)
 scale = Vector2(0.25, 0.25)
 texture_normal = ExtResource("2_ly3m0")
 passby_press = true
 action = "Right"
 
 [node name="Jump" type="TouchScreenButton" parent="."]
-position = Vector2(1089, -108)
+position = Vector2(1640.66, 637.332)
 scale = Vector2(0.25, 0.25)
 texture_normal = ExtResource("3_jydm4")
 passby_press = true
 action = "Jump"
+
+[node name="Hat" type="TouchScreenButton" parent="."]
+position = Vector2(1649, -14.6677)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_jydm4")
+passby_press = true
+action = "Hat"
