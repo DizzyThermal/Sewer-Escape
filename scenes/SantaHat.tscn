@@ -1,0 +1,195 @@
+[gd_scene load_steps=25 format=3 uid="uid://c4p13bboqrbpu"]
+
+[ext_resource type="Texture2D" uid="uid://b2cqa3py3ntbh" path="res://art/Santa-Hat.png" id="1_5s2su"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dlmhj"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tatcn"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grauv"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fsf7"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gh03a"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41qi5"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wljxw"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1f0hw"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdwai"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4a4r"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4u15g"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqvib"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxbv3"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1naq"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbhkw"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y07jb"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(160, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60qxt"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2f2ej"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxrfy"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0cvdf"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbmkm"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lu7va"]
+atlas = ExtResource("1_5s2su")
+region = Rect2(160, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t2fat"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dlmhj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tatcn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grauv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fsf7")
+}],
+"loop": true,
+"name": &"Idle-Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gh03a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_41qi5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wljxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1f0hw")
+}],
+"loop": true,
+"name": &"Idle-Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdwai")
+}],
+"loop": true,
+"name": &"Jump-Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p4a4r")
+}],
+"loop": true,
+"name": &"Jump-Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4u15g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqvib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxbv3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1naq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbhkw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y07jb")
+}],
+"loop": true,
+"name": &"Walk-Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60qxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2f2ej")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxrfy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0cvdf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbmkm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lu7va")
+}],
+"loop": true,
+"name": &"Walk-Right",
+"speed": 5.0
+}]
+
+[node name="SantaHat" type="AnimatedSprite2D"]
+position = Vector2(0, -23)
+sprite_frames = SubResource("SpriteFrames_t2fat")
+animation = &"Walk-Right"

@@ -15,21 +15,29 @@ script/source = "extends TextureRect
 
 @export
 var rising = true
+@export
+var water_speed = 5
 
 var width = null
 var height = null
+
+var timer = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	width = self.size.x
 	height = self.size.y
+	timer = Timer.new()
+	timer.autostart = true
+	timer.wait_time = 1.0 / water_speed
+	timer.timeout.connect(_on_timer_timeout)
+	add_child(timer)
 
 func _on_timer_timeout():
 	if rising:
 		self.set_size(Vector2(width, height))
-		height += 1
-		self.global_position.y -= 1
-		print(self.size)
+		height += 2
+		self.global_position.y -= 2
 
 func set_rising(rising_value):
 	self.rising = rising_value
@@ -44,9 +52,3 @@ texture = SubResource("AnimatedTexture_fjydl")
 expand_mode = 2
 stretch_mode = 1
 script = SubResource("GDScript_kibj2")
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.1
-autostart = true
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

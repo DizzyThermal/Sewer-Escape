@@ -8,13 +8,19 @@ var xDirection = 1
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-var hats = [preload("res://scenes/PilgrimHat.tscn"), preload("res://scenes/RedHat.tscn")]
+var hats = [
+	preload("res://scenes/PilgrimHat.tscn"),
+	preload("res://scenes/SantaHat.tscn"),
+	preload("res://scenes/RedHat.tscn"),
+]
 var hat_index = 1
 
 func get_hat():
 	var hat_node = get_node("PilgrimHat")
 	if hat_node == null:
 		hat_node = get_node("RedHat")
+	if hat_node == null:
+		hat_node = get_node("SantaHat")
 	
 	return hat_node
 

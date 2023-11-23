@@ -97,6 +97,7 @@ offset_left = -160.0
 offset_top = 22.0
 offset_right = 1696.0
 offset_bottom = 544.0
+water_speed = 8
 
 [node name="DeathZoneLevel2" type="Area2D" parent="Water"]
 collision_layer = 4
