@@ -15,8 +15,14 @@ fill_to = Vector2(0, 1)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_tixx6")
 
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Sprite2D"]
+remote_path = NodePath("../../CollisionPolygon2D")
+
 [node name="Light" type="PointLight2D" parent="."]
 modulate = Color(0.784314, 0.784314, 1, 1)
 position = Vector2(1.66893e-06, 27)
 scale = Vector2(0.46875, 0.34375)
 texture = SubResource("GradientTexture2D_i2w3r")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-12, -15, -12, 10, -15, 10, -15, 15, -16, 15, -16, 9, -13, 9, -13, -16, 13, -16, 13, 9, 16, 9, 16, 15, 15, 15, 15, 10, 12, 10, 12, -15)

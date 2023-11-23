@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b13cq4ve8w3uv"]
 
-[ext_resource type="Script" path="res://enemies/Rock.gd" id="1_qw8u2"]
+[ext_resource type="Script" path="res://scripts/Rock.gd" id="1_qw8u2"]
 [ext_resource type="Texture2D" uid="uid://cmwomjsyt1l5x" path="res://art/Rock.png" id="2_roona"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dfa7"]
