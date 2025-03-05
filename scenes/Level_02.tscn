@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://bd7ajehebwd3e"]
 
 [ext_resource type="TileSet" uid="uid://bir4qfvaulu2x" path="res://scenes/Tileset.tres" id="1_7ekmf"]
-[ext_resource type="Script" path="res://scripts/Level_02.gd" id="1_eoj1b"]
+[ext_resource type="Script" uid="uid://bcuwcmecuw1w0" path="res://scripts/Level_02.gd" id="1_eoj1b"]
 [ext_resource type="PackedScene" uid="uid://by7gxrbscsjbo" path="res://scenes/Player.tscn" id="2_3ednx"]
 [ext_resource type="PackedScene" uid="uid://dmgnd80dkhm56" path="res://scenes/Pipe.tscn" id="3_l2tfk"]
 [ext_resource type="PackedScene" uid="uid://b02j3hq8rkmft" path="res://scenes/Water.tscn" id="4_6h3gn"]

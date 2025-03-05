@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=3 uid="uid://by7gxrbscsjbo"]
 
-[ext_resource type="Script" path="res://scripts/Player.gd" id="1_i0nm6"]
+[ext_resource type="Script" uid="uid://dm7veim301rw7" path="res://scripts/Player.gd" id="1_i0nm6"]
 [ext_resource type="Texture2D" uid="uid://dllhts8ar81g" path="res://art/Player.png" id="2_jftny"]
 [ext_resource type="PackedScene" uid="uid://bluxn426tm8wo" path="res://scenes/PilgrimHat.tscn" id="3_8si1m"]
 [ext_resource type="PackedScene" uid="uid://6g03xxfqvh3d" path="res://scenes/BackgroundMusic.tscn" id="3_j1ftj"]
